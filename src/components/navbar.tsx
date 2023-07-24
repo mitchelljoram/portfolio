@@ -1,5 +1,6 @@
 // libraries
 import Link from "next/link"
+import Image from "next/image"
 import { useRouter } from "next/router"
 
 // components
@@ -61,29 +62,37 @@ export function Navbar({ ...props }) {
         alignItems="flex-start|center"
         justifyContent="space-between"
       >
-        <h1
-            display="flex"
-            w="100%"
-            textDecoration="none"
-            color="text"
-            alignItems="center"
-            fontSize="4xl|xl"
-            fontWeight="semibold"
-            mr="0|10"
-            mb="2|0"
+        <div
+          display="flex"
+          w="70%"
+          flexDirection="row"
+          alignItems="center"
+          gap="2"
         >
+          <div width='50px' height='50px' position='relative'>
+            <Image src="/logo.png" alt="Logo" layout="fill"/>
+          </div>
+          <h1
+              display="flex"
+              textDecoration="none"
+              color="text"
+              alignItems="center"
+              fontSize="4xl|xl"
+              fontWeight="semibold"
+              mb="2|0"
+          >
             {config.site.name}
-        </h1>
+          </h1>
+        </div>
         <div
           display="flex"
           w="100%"
           alignItems="center"
-          justifyContent="space-between|flex-end"
           ml="0|auto"
         >
           <div
             display="inline-grid"
-            col={`repeat(${config.links.length}, minmax(0,auto))`}
+            col={`repeat(${config.links.length+1}, minmax(0,auto))`}
             gap="10"
           >
             {config.links.map((link) => (
@@ -91,9 +100,25 @@ export function Navbar({ ...props }) {
                 {link.title}
               </NavbarLink>
             ))}
+            <div
+              display="flex"
+              flexDirection="row"
+              gap="2"
+            >
+              <Link href="https://www.linkedin.com/in/mitchell-joram/" passHref>
+                <a width='30px' height='30px' position='relative'>
+                  <Image src="/social/linkedin.png" alt="LinkedIn" layout='fill'/>
+                </a>
+              </Link>
+              <Link href="https://github.com/mitchelljoram" passHref>
+                <a  width='28px' height='28px' position='relative'>
+                  <Image src="/social/github.png" alt="Github" layout='fill'/>
+                </a>
+              </Link>
+            </div>
           </div>
-          {/*<ModeToggle ml="10" />*/}
         </div>
+        {/*<ModeToggle ml="10" />*/}
       </div>
     </header>
   )

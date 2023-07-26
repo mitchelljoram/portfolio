@@ -16,9 +16,5 @@ export default {
         title: "Projects",
         url: "/projects",
       },
-      {
-        title: "Reserve",
-        url: "/reserve",
-      },
     ],
 }

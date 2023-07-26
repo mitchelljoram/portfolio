@@ -62,31 +62,23 @@ export function Navbar({ ...props }) {
         alignItems="flex-start|center"
         justifyContent="space-between"
       >
-        <div
+        <h1
           display="flex"
           w="70%"
-          flexDirection="row"
+          textDecoration="none"
+          color="text"
+          justifyContent="flex-start"
           alignItems="center"
-          gap="2"
+          fontSize="4xl|xl"
+          fontWeight="semibold"
+          mb="2|0"
         >
-          <div width='50px' height='50px' position='relative'>
-            <Image src="/logo.png" alt="Logo" layout="fill"/>
-          </div>
-          <h1
-              display="flex"
-              textDecoration="none"
-              color="text"
-              alignItems="center"
-              fontSize="4xl|xl"
-              fontWeight="semibold"
-              mb="2|0"
-          >
-            {config.site.name}
-          </h1>
-        </div>
+          {config.site.name}
+        </h1>
         <div
           display="flex"
           w="100%"
+          justifyContent="flex-end"
           alignItems="center"
           ml="0|auto"
         >

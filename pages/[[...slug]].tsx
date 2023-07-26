@@ -12,7 +12,7 @@ import { Layout } from "@/components/layout"
 import { Page } from "src/types"
 
 export const mdxComponents = {
-  h2: (props) => <h2 style={{ color: "lightgreen" }} {...props} />,
+  h2: (props) => <h2 {...props} />,
   a: (props) => (
     <a color="primary" _hover={{ textDecoration: "underline" }} {...props} />
   ),
@@ -41,34 +41,6 @@ export default function PostPage({ page }: PageProps) {
   })
 
   return (
-    // <Layout>
-    //   <section py="10|18">
-    //     <div variant="container">
-    //       <div textAlign="center">
-    //         <h1 variant="heading.h1">A Modern Stack</h1>
-    //         <p variant="text.lead" mx="auto" mt="4">
-    //           Blast off with the speed of Next.js, the power of MDX and the
-    //           flexibility of Reflexjs.
-    //         </p>
-    //         <div display="inline-grid" col="2" gap="4" mt="6">
-    //           <a
-    //             href="https://github.com/reflexjs/reflexjs"
-    //             variant="button.primary.lg"
-    //           >
-    //             Get Started
-    //           </a>
-    //           <a
-    //             href="https://github.com/reflexjs/reflexjs"
-    //             variant="button.muted.lg"
-    //           >
-    //             GitHub
-    //           </a>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </section>
-    // </Layout>
-
     <Layout>
       <article>
         <div>

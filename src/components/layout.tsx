@@ -12,7 +12,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div
       style={{
-        maxWidth: 800,
+        maxWidth: 1000,
         margin: "0 auto",
       }}
     >

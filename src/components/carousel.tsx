@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 
-const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 3000;
 
 export function Carousel(props) {
@@ -18,7 +17,7 @@ export function Carousel(props) {
     timeoutRef.current = setTimeout(
       () =>
         setIndex((prevIndex) =>
-          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+          prevIndex === 3 - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
@@ -29,7 +28,7 @@ export function Carousel(props) {
   }, [index]);
 
   return (
-    <div my="0" mx="auto" overflow="hidden" maxW="1000px" {...props}>
+    <div my="0" mx="auto" overflow="hidden" width="1000px" {...props}>
         <div
             whiteSpace="nowrap"
             transition="ease-out 1000ms"
@@ -59,43 +58,43 @@ export function Carousel(props) {
         <div
             textAlign="center"
         >
-        <div
-            display="inline-block"
-            width="20px"
-            height="20px"
-            borderRadius="50%"
-            margin="0 5px"
-            backgroundColor={0 === index ? "#000" : "#c4c4c4"}
-            cursor="pointer"
-            onClick={() => {
-              setIndex(0);
-            }}
-        />
-        <div
-            display="inline-block"
-            width="20px"
-            height="20px"
-            borderRadius="50%"
-            margin="0 5px"
-            backgroundColor={1 === index ? "#000" : "#c4c4c4"}
-            cursor="pointer"
-            onClick={() => {
-              setIndex(1);
-            }}
-        />
-        <div
-            display="inline-block"
-            width="20px"
-            height="20px"
-            borderRadius="50%"
-            margin="0 5px"
-            backgroundColor={2 === index ? "#000" : "#c4c4c4"}
-            cursor="pointer"
-            onClick={() => {
-              setIndex(2);
-            }}
-        />
-      </div>
+            <div
+                display="inline-block"
+                width="20px"
+                height="20px"
+                borderRadius="50%"
+                margin="0 5px"
+                backgroundColor={0 === index ? "#000" : "#c4c4c4"}
+                cursor="pointer"
+                onClick={() => {
+                setIndex(0);
+                }}
+            />
+            <div
+                display="inline-block"
+                width="20px"
+                height="20px"
+                borderRadius="50%"
+                margin="0 5px"
+                backgroundColor={1 === index ? "#000" : "#c4c4c4"}
+                cursor="pointer"
+                onClick={() => {
+                setIndex(1);
+                }}
+            />
+            <div
+                display="inline-block"
+                width="20px"
+                height="20px"
+                borderRadius="50%"
+                margin="0 5px"
+                backgroundColor={2 === index ? "#000" : "#c4c4c4"}
+                cursor="pointer"
+                onClick={() => {
+                setIndex(2);
+                }}
+            />
+        </div>
     </div>
   );
 }

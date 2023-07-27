@@ -7,6 +7,7 @@ import { useHydrate } from "next-mdx/client"
 
 // components
 import { Layout } from "@/components/layout"
+import { Carousel } from "@/components/carousel"
 
 // types
 import { Page } from "src/types"
@@ -25,6 +26,7 @@ export const mdxComponents = {
 
   div: (props) => <div {...props} />,
   img: (props) => <Image {...props} />,
+  Carousel: (props) => <Carousel {...props} />,
 }
 
 export function Alert({ text }) {

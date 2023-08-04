@@ -7,7 +7,7 @@ import { useHydrate } from "next-mdx/client"
 
 // components
 import { Layout } from "@/components/layout"
-import { Carousel } from "@/components/carousel"
+import { CanproCarousel, WorkoutCarousel } from "@/components/carousels"
 
 // types
 import { Page } from "src/types"
@@ -23,10 +23,11 @@ export const mdxComponents = {
   ol: (props) => <ol variant="list.ordered" {...props} />,
   strong: (props) => <strong fontWeight="semibold" {...props} />,
   inlineCode: (props) => <code color="primary" fontSize="xl" {...props} />,
-
   div: (props) => <div {...props} />,
   img: (props) => <Image {...props} />,
-  Carousel: (props) => <Carousel {...props} />,
+
+  CanproCarousel: (props) => <CanproCarousel {...props} />,
+  WorkoutCarousel: (props) => <WorkoutCarousel {...props} />,
 }
 
 export function Alert({ text }) {

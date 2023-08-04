@@ -1,7 +1,7 @@
 export default {
     site: {
       name: "Mitchell Joram",
-      copyright: `© ${new Date().getFullYear()}`,
+      copyright: `© ${new Date().getFullYear()} Next.js + MDX + Reflexjs`,
     },
     links: [
       {

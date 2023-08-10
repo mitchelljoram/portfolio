@@ -7,6 +7,7 @@ import { useHydrate } from "next-mdx/client"
 
 // components
 import { Layout } from "@/components/layout"
+import { ParticlePhysics } from "@/components/home"
 import { CanproCarousel, WorkoutCarousel } from "@/components/carousels"
 
 // types
@@ -26,6 +27,11 @@ export const mdxComponents = {
   div: (props) => <div {...props} />,
   img: (props) => <Image {...props} />,
 
+  // custom components
+  // home
+  ParticlePhysics: (props) => <ParticlePhysics {...props} />,
+
+  // projects
   CanproCarousel: (props) => <CanproCarousel {...props} />,
   WorkoutCarousel: (props) => <WorkoutCarousel {...props} />,
 }

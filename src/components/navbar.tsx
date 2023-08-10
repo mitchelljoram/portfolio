@@ -35,6 +35,7 @@ export function NavbarLink({
           color: "primary",
           textDecoration: "underline",
         }}
+        onClick={() => {window.location.href=`/${children.toString().toLowerCase() === 'home' ? '' : children.toString().toLowerCase()}`}}
         {...props}
       >
         {children}

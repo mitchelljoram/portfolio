@@ -9,8 +9,8 @@ export default {
         url: "/",
       },
       {
-        title: "About",
-        url: "/about",
+        title: "Skillset",
+        url: "/skillset",
       },
       {
         title: "Projects",

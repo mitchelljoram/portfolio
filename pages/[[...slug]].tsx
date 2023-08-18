@@ -14,6 +14,7 @@ import { CanproCarousel, WorkoutCarousel } from "@/components/carousels"
 import { Page } from "src/types"
 
 export const mdxComponents = {
+  h1: (props) => <h1 {...props} />,
   h2: (props) => <h2 {...props} />,
   a: (props) => (
     <a color="primary" _hover={{ textDecoration: "underline" }} {...props} />

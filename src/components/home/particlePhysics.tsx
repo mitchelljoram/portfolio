@@ -41,7 +41,7 @@ class Particle {
     }
     update() {
         this.dx = this.effect.mouse.x - this.x - ((window.innerWidth - this.effect.width) / 2);
-        this.dy = this.effect.mouse.y - this.y - ((window.innerHeight - this.effect.height) / 2);
+        this.dy = this.effect.mouse.y + this.effect.mouse.scrollPosition - 225 - this.y - ((window.innerHeight - this.effect.height) / 2);
         this.distance = this.dx * this.dx + this.dy * this.dy;  
         this.force = -this.effect.mouse.radius / this.distance;
 
@@ -70,6 +70,7 @@ class Effect {
         radius: number;
         x: number;
         y: number;
+        scrollPosition: number;
     }
 
     constructor(width, height) {
@@ -85,13 +86,16 @@ class Effect {
         this.mouse = {
             radius: 10000,
             x: undefined,
-            y: undefined
+            y: undefined,
+            scrollPosition: 0
         }
         window.addEventListener("mousemove", (event) => {
-
             this.mouse.x = event.x;
             this.mouse.y = event.y;
         });
+        window.addEventListener("scroll", () => {
+            this.mouse.scrollPosition = Math.round(window.scrollY);
+        })
     }
     init(context){
         context.drawImage(this.image, this.x, this.y, this.image.width, this.image.height);
@@ -101,9 +105,9 @@ class Effect {
                 const index = ((this.width * y) + x) * 4;
                 const alpha = data[index + 3];
                 if (alpha) {
-                    const red = data[index];
-                    const green = data[index + 1];
-                    const blue = data[index + 2];
+                    const red = 25//data[index];
+                    const green = 25//data[index + 1];
+                    const blue = 36//data[index + 2];
                     const color = `rgb(${red},${green},${blue})`;
                     this.particles.push(new Particle(this, x, y, color));
                 }

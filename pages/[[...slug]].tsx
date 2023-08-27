@@ -8,6 +8,7 @@ import { useHydrate } from "next-mdx/client"
 // components
 import { Layout } from "@/components/layout"
 import { ParticlePhysics } from "@/components/home"
+import { SoftwareDevSkillsetTags, DataAnalystSkillsetTags, SoftSkillsetTags } from "@/components/skillsetTags"
 import { CanproCarousel, WorkoutCarousel } from "@/components/carousels"
 
 // types
@@ -31,6 +32,11 @@ export const mdxComponents = {
   // custom components
   // home
   ParticlePhysics: (props) => <ParticlePhysics {...props} />,
+
+  // skillset
+  SoftwareDevSkillsetTags: (props) => <SoftwareDevSkillsetTags {...props} />,
+  DataAnalystSkillsetTags: (props) => <DataAnalystSkillsetTags {...props} />,
+  SoftSkillsetTags: (props) => <SoftSkillsetTags {...props} />,
 
   // projects
   CanproCarousel: (props) => <CanproCarousel {...props} />,

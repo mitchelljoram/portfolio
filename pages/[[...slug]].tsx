@@ -7,8 +7,8 @@ import { useHydrate } from "next-mdx/client"
 
 // components
 import { Layout } from "@/components/layout"
-import { ParticlePhysics } from "@/components/home"
-import { SoftwareDevSkillsetTags, DataAnalystSkillsetTags, SoftSkillsetTags } from "@/components/skillsetTags"
+import { Home } from "@/components/home"
+import { StackSkillsetTags, SoftwareDevSkillsetTags, DataAnalystSkillsetTags, SoftSkillsetTags } from "@/components/skillsetTags"
 import { CanproCarousel, WorkoutCarousel } from "@/components/carousels"
 
 // types
@@ -17,6 +17,7 @@ import { Page } from "src/types"
 export const mdxComponents = {
   h1: (props) => <h1 {...props} />,
   h2: (props) => <h2 {...props} />,
+  h3: (props) => <h3 {...props} />,
   a: (props) => (
     <a color="primary" _hover={{ textDecoration: "underline" }} {...props} />
   ),
@@ -31,9 +32,10 @@ export const mdxComponents = {
 
   // custom components
   // home
-  ParticlePhysics: (props) => <ParticlePhysics {...props} />,
+  Home: (props) => <Home {...props} />,
 
   // skillset
+  StackSkillsetTags: (props) => <StackSkillsetTags {...props} />,
   SoftwareDevSkillsetTags: (props) => <SoftwareDevSkillsetTags {...props} />,
   DataAnalystSkillsetTags: (props) => <DataAnalystSkillsetTags {...props} />,
   SoftSkillsetTags: (props) => <SoftSkillsetTags {...props} />,

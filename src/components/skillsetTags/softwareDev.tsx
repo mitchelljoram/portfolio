@@ -1,11 +1,11 @@
 export function SoftwareDevSkillsetTags(...props) {
-  const skills: string[] = ["Software Engineering", "Full-stack Development", "Data Structures", "Database Design and Implementation", "CI/CD", "Agile Development", "Scrum", "UI/UX Design", "Unit Testing", "A/B Testing", "Debugging", "System Diagnostics", "Troubleshooting"]
+  const skills: string[] = ["Software Engineering", "Web Development", "Full-stack Development", "Data Structures", "Database Design and Implementation", "UI/UX Design", "CI/CD", "Agile Development", "Scrum", "Unit Testing", "A/B Testing", "Debugging", "System Diagnostics", "Troubleshooting"]
   
   return (
     <div {...props}>
       <div display="grid" gridTemplateColumns={"auto auto auto auto"} gap="20px" justifyContent="center" mx="auto" mt="10">
         {skills.map((skill, index) => (
-          <div key={index} width={skill.length >= 15 ? "320px":"150px"} gridColumn={skill.length >= 15 ? "span 2":"span 1"} background="#191924" borderRadius="8" color="#fff" textAlign="center" px="3" py="2">
+          <div key={index} width={skill.length >= 15 ? "320px":"150px"} gridColumn={skill.length >= 15 ? "span 2":"span 1"} background="#191924" borderRadius="4" color="#fff" textAlign="center" px="3" py="2">
             <strong>{skill}</strong>
           </div>
         ))}

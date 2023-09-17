@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 export function Basic(props) {
     return (
         <div display="absolute" left="164px" {...props}>

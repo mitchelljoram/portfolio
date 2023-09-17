@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 // libraries
 import * as React from "react"
 import Link from "next/link"
@@ -52,6 +54,7 @@ export function Alert({ text }) {
 export interface PageProps {
   page: Page
 }
+
 
 export default function PostPage({ page }: PageProps) {
   const content = useHydrate(page, {

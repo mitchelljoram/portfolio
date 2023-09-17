@@ -86,7 +86,7 @@ const theme = {
   breakpoints: ["640px", "768px", "1024px", "1280px"],
   fonts: {
     body:
-      "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+      "Rubik, sans-serif",
     heading: "inherit",
     monospace:
       "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",

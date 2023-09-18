@@ -10,8 +10,7 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "preview": "next build && next start",
-    "start": "react-scripts --openssl-legacy-provider start"
+    "preview": "next build && next start"
   },
   "dependencies": {
     "next": "^11.1.1",

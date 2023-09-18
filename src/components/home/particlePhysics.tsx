@@ -43,7 +43,7 @@ class Particle {
     }
     update() {
         this.dx = this.effect.mouse.x - this.x - ((window.innerWidth - this.effect.width) / 2);
-        this.dy = this.effect.mouse.y + this.effect.mouse.scrollPosition - 225 - this.y - ((window.innerHeight - this.effect.height) / 2);
+        this.dy = this.effect.mouse.y + this.effect.mouse.scrollPosition - 150 - this.y - ((window.innerHeight - this.effect.height) / 2);
         this.distance = this.dx * this.dx + this.dy * this.dy;  
         this.force = -this.effect.mouse.radius / this.distance;
 

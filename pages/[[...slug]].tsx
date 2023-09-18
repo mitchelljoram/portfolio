@@ -65,9 +65,9 @@ export default function PostPage({ page }: PageProps) {
     <Layout>
       <article>
         <div>
-          <h1>{page.frontMatter.title}</h1>
+          {page.frontMatter.title !== "Home" ? <h1>{page.frontMatter.title}</h1> : null}
           {page.frontMatter.excerpt ? <p>{page.frontMatter.excerpt}</p> : null}
-          <hr />
+          {page.frontMatter.title !== "Home" ? <hr /> : null}
           {content}
         </div>
       </article>

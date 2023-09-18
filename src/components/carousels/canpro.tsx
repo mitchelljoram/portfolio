@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const delay = 3000;
+const delay = 10000;
 
 export function CanproCarousel(props) {
   const [index, setIndex] = useState(0);

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const delay = 3000;
+const delay = 10000;
 
 export function WorkoutCarousel(props) {
   const [index, setIndex] = useState(0);
